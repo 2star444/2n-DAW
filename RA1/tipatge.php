@@ -1,10 +1,15 @@
 <?php
 
-declare(strict_types=1); //tipatge estricte
+declare(strict_types=1);
 
-function calcularImpostos(float $preu, int $impost): float 
+namespace App\Domain\Impostos; //namespace --> nom del paquet, evitar conflictes amb altres classes
+
+//use App\Domain\Impostos\CalculadoraImpostos; use --> importar una classe d'un altre paquet
+
+final class CalculadoraImpostos //classe no heretada --> final
 {
-    $import = $preu * ($impost / 100);
-    
-    return $import;
+    public function calcular(float $preu, int $impost): float 
+    {
+        return $preu * ($impost / 100);
+    }
 }

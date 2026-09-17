@@ -2,14 +2,26 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\Impostos; //namespace --> nom del paquet, evitar conflictes amb altres classes
+namespace App\Domain\Factura;
 
-//use App\Domain\Impostos\CalculadoraImpostos; use --> importar una classe d'un altre paquet
+use App\Domain\Impostos\CalculadoraImpostos;
+use InvalidArgumentException;
 
-final class CalculadoraImpostos //classe no heretada --> final
+final class Factura
 {
-    public function calcular(float $preu, int $impost): float 
+    public function __construct(
+        private readonly CalculadoraImpostos $calculadora
+    ) {}
+
+    public function calcularTotal(float $subtotal, float $descompte = 0.0): float
     {
-        return $preu * ($impost / 100);
+        if ($descompte < 0.0 || $descompte > 1.0) {
+            throw new InvalidArgumentException('El descompte ha de ser un percentatge entre 0.0 i 1.0.');
+        }
+
+        $subtotalAmbDescompte = $subtotal * (1.0 - $descompte);
+
+        return $this->calculadora->calcular($subtotalAmbDescompte, 21);
     }
+}
 }

@@ -18,43 +18,43 @@ const suma = num1 + num2;
 document.write("La suma és: " + suma);
 
 //6
-let numero = prompt("Escriu un número");
+let numero = parseInt(prompt("Escriu un número"));
 document.write(++numero);
 
 //7
-let numero2 = prompt("Escriu un número");
+let numero2 = parseInt(prompt("Escriu un número"));
 document.write(numero2++);
 
 //8
-const n = prompt("Escriu un número");
-const m = prompt("Escriu un altre número");
+const n = parseInt(prompt("Escriu un número"));
+const m = parseInt(prompt("Escriu un altre número"));
 
 document.write(Math.max(n, m));
 
 //9
-const n1 = prompt("Escriu un número");
-const n2 = prompt("Escriu un altre número");
-const n3 = prompt("Escriu un altre número");
+const n1 = parseInt(prompt("Escriu un número"));
+const n2 = parseInt(prompt("Escriu un altre número"));
+const n3 = parseInt(prompt("Escriu un altre número"));
 
 document.write(Math.max(n1, n2, n3));
 
 //10
-const div = prompt("Escriu un número");
+const div = parseInt(prompt("Escriu un número"));
 let divi = div % 2 === 0;
 let msg = divi ? "El número és parell" : "El número és senar";
 document.write(msg);
 
 //11
-const num = prompt("Escriu un número");
-const num2 = prompt("Escriu un altre número");
+const num = parseInt(prompt("Escriu un número"));
+const num2 = parseInt(prompt("Escriu un altre número"));
 let igual = num !== num2;
 let msg2 = igual ? "Els números són iguals" : "Els números són diferents";
 document.write(msg2);
 
 //12
-let num3 = prompt("Escriu un número");
-let num4 = prompt("Escriu un altre número");
-let num5 = prompt("Escriu un altre número");
+let num3 = parseInt(prompt("Escriu un número"));
+let num4 = parseInt(prompt("Escriu un altre número"));
+let num5 = parseInt(prompt("Escriu un altre número"));
 
 let iguals = num3 === num4 && num4 === num5;
 let msg3 = iguals ? "Els tres números són iguals" : "Els tres números no són iguals";
@@ -72,7 +72,7 @@ document.write(`Vocals trobades: ${vocals || "No s'han trobat vocals"}`);
 
 //15
 let frase2 = prompt("Escriu una frase");
-const total = frase2.toLowerCase().split(" ").reduce((compt, char)) => "aeiou".includes(char) ? compt + 1 : compt, 0);
+const total = frase2.toLowerCase().split("").reduce((compt, char) => "aeiou".includes(char) ? compt + 1 : compt, 0);
 document.write("La frase conté " + total + " vocals");
 
 //16
@@ -90,11 +90,11 @@ vocals.forEach(vocal => {
 });
 
 //17
-let num6 = prompt("Escriu un número");
+let num6 = parseInt(prompt("Escriu un número"));
 document.write(num6 % 2 === 0 ? "El número és divisible per 2" : "El número no és divisible per 2");
 
 //18
-let num7 = prompt("Escriu un número");
+let num7 = parseInt(prompt("Escriu un número"));
 let divisors = [2, 3, 5, 7];
 let valid = divisors.some(divisor => num7 % divisor === 0);
 divisors.forEach(divisor => {
@@ -107,7 +107,7 @@ if (!valid) {
 }
 
 //19
-let num8 = prompt("Escriu un número");
+let num8 = parseInt(prompt("Escriu un número"));
 
 let nums = [];
 for (let i = 1; i <= num8; i++) {
@@ -120,8 +120,8 @@ for (let i = 1; i <= num8; i++) {
 document.write(`Els divisors de ${num8} són: ${nums.join(", ") || "No hi ha divisors"}`);
 
 //20
-let num9 = prompt("Escriu un número");
-let num10 = prompt("Escriu un altre número");
+let num9 = parseInt(prompt("Escriu un número"));
+let num10 = parseInt(prompt("Escriu un altre número"));
 let divisors1 = [];
 for (let i = 1; i <= Math.min(num9, num10); i++) {
     if (num9 % i === 0 && num10 % i === 0) {
@@ -132,5 +132,23 @@ for (let i = 1; i <= Math.min(num9, num10); i++) {
 document.write(`Els divisors comuns de ${num9} i ${num10} són: ${divisors1.join(", ") || "No hi ha divisors comuns"}`);
 
 //21
-let num11= prompt("Escriu un número");
-let divisors2 = [];
+let num11 = parseInt(prompt("Escriu un número"));
+let esPrimer = true;
+
+if (num11 <= 1) {
+    esPrimer = false;
+} else {
+    let i = 2;
+    while (i <= num11 / 2 && esPrimer) {
+        if (num11 % i === 0) {
+            esPrimer = false;
+        }
+        i++;
+    }
+}
+
+if (esPrimer) {
+    document.write(`El número ${num11} és primer.`);
+} else {
+    document.write(`El número ${num11} no és primer.`);
+}

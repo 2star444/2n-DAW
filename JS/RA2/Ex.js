@@ -132,23 +132,22 @@ for (let i = 1; i <= Math.min(num9, num10); i++) {
 document.write(`Els divisors comuns de ${num9} i ${num10} són: ${divisors1.join(", ") || "No hi ha divisors comuns"}`);
 
 //21
-let num11 = parseInt(prompt("Escriu un número"));
-let esPrimer = true;
+const num = parseInt(prompt("Escriu un número"));
 
-if (num11 <= 1) {
-    esPrimer = false;
-} else {
-    let i = 2;
-    while (i <= num11 / 2 && esPrimer) {
-        if (num11 % i === 0) {
-            esPrimer = false;
-        }
-        i++;
+function esPrimer(n) {
+    if (n <= 1) return false;
+    if (n === 2) return true;
+    if (n % 2 === 0) return false; 
+
+    const limit = Math.sqrt(n);
+    for (let i = 3; i <= limit; i += 2) {
+        if (n % i === 0) return false;
     }
+    return true;
 }
 
-if (esPrimer) {
-    document.write(`El número ${num11} és primer.`);
-} else {
-    document.write(`El número ${num11} no és primer.`);
-}
+const msg = esPrimer(num) 
+    ? `El número ${num} és primer.` 
+    : `El número ${num} no és primer.`;
+
+document.write(msg);

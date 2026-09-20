@@ -24,4 +24,3 @@ final class Factura
         return $this->calculadora->calcular($subtotalAmbDescompte, 21);
     }
 }
-}

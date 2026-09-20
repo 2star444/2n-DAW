@@ -39,105 +39,104 @@ const n3 = parseInt(prompt("Escriu un altre número"));
 document.write(Math.max(n1, n2, n3));
 
 //10
-const div = parseInt(prompt("Escriu un número"));
-let divi = div % 2 === 0;
-let msg = divi ? "El número és parell" : "El número és senar";
-document.write(msg);
+const div10 = parseInt(prompt("Escriu un número"));
+let divi10 = div10 % 2 === 0;
+let msg10 = divi10 ? "El número és parell" : "El número és senar";
+document.write(msg10);
 
 //11
-const num = parseInt(prompt("Escriu un número"));
-const num2 = parseInt(prompt("Escriu un altre número"));
-let igual = num !== num2;
-let msg2 = igual ? "Els números són iguals" : "Els números són diferents";
-document.write(msg2);
+const num11 = parseInt(prompt("Escriu un número"));
+const num12 = parseInt(prompt("Escriu un altre número"));
+let igual11 = num11 !== num12;
+let msg11 = igual11 ? "Els números són iguals" : "Els números són diferents";
+document.write(msg11);
 
 //12
-let num3 = parseInt(prompt("Escriu un número"));
-let num4 = parseInt(prompt("Escriu un altre número"));
-let num5 = parseInt(prompt("Escriu un altre número"));
+let num13 = parseInt(prompt("Escriu un número"));
+let num14 = parseInt(prompt("Escriu un altre número"));
+let num15 = parseInt(prompt("Escriu un altre número"));
 
-let iguals = num3 === num4 && num4 === num5;
-let msg3 = iguals ? "Els tres números són iguals" : "Els tres números no són iguals";
-document.write(msg3);
+let iguals12 = num13 === num14 && num14 === num15;
+let msg12 = iguals12 ? "Els tres números són iguals" : "Els tres números no són iguals";
+document.write(msg12);
 
 //13
-let frase = prompt("Escriu una frase");
-let total = frase.ignoreCase().split("a").length - 1;
-document.write("La frase conté " + total + " lletres 'a'");
+let frase13 = prompt("Escriu una frase");
+let total13 = frase13.toLowerCase().split("a").length - 1;
+document.write("La frase conté " + total13 + " lletres 'a'");
 
 //14
-let frase1 = prompt("Escriu una frase");
-const vocals = frase1.toLowerCase().split("").filter(char => "aeiou".includes(char)).join(", ");
-document.write(`Vocals trobades: ${vocals || "No s'han trobat vocals"}`);
+let frase14 = prompt("Escriu una frase");
+const vocals14 = frase14.toLowerCase().split("").filter(char => "aeiou".includes(char)).join(", ");
+document.write(`Vocals trobades: ${vocals14 || "No s'han trobat vocals"}`);
 
 //15
-let frase2 = prompt("Escriu una frase");
-const total = frase2.toLowerCase().split("").reduce((compt, char) => "aeiou".includes(char) ? compt + 1 : compt, 0);
-document.write("La frase conté " + total + " vocals");
+let frase15 = prompt("Escriu una frase");
+const total15 = frase15.toLowerCase().split("").reduce((compt, char) => "aeiou".includes(char) ? compt + 1 : compt, 0);
+document.write("La frase conté " + total15 + " vocals");
 
 //16
-let frase3 = prompt("Escriu una frase");
+let frase16 = prompt("Escriu una frase");
 
 function comptarVocal(frase, vocal) {
     return frase.toLowerCase().split(vocal).length - 1;
 }
 
-const vocals = ["a", "e", "i", "o", "u"];
+const vocals16 = ["a", "e", "i", "o", "u"];
 
-vocals.forEach(vocal => {
-    const quantitat = comptarVocal(frase3, vocal);
-    console.log(`La vocal '${vocal}' apareix ${quantitat} vegades.`);
+vocals16.forEach(vocal => {
+    const quantitat16 = comptarVocal(frase16, vocal);
+    console.log(`La vocal '${vocal}' apareix ${quantitat16} vegades.`);
 });
 
 //17
-let num6 = parseInt(prompt("Escriu un número"));
-document.write(num6 % 2 === 0 ? "El número és divisible per 2" : "El número no és divisible per 2");
+let num17 = parseInt(prompt("Escriu un número"));
+document.write(num17 % 2 === 0 ? "El número és divisible per 2" : "El número no és divisible per 2");
 
 //18
-let num7 = parseInt(prompt("Escriu un número"));
-let divisors = [2, 3, 5, 7];
-let valid = divisors.some(divisor => num7 % divisor === 0);
-divisors.forEach(divisor => {
-    if (num7 % divisor === 0) {
+let num18 = parseInt(prompt("Escriu un número"));
+let divisors18 = [2, 3, 5, 7];
+let valid18 = divisors18.some(divisor => num18 % divisor === 0);
+divisors18.forEach(divisor => {
+    if (num18 % divisor === 0) {
         document.write(`El número és divisible per ${divisor}<br>`);
     }
 });
-if (!valid) {
+if (!valid18) {
     document.write("El número no és divisible per 2, 3, 5 o 7");
 }
 
 //19
-let num8 = parseInt(prompt("Escriu un número"));
+let num19 = parseInt(prompt("Escriu un número"));
 
-let nums = [];
-for (let i = 1; i <= num8; i++) {
-    
-    if (num8 % i === 0) {
-        nums.push(i);
+let nums19 = [];
+for (let i = 1; i <= num19; i++) {
+    if (num19 % i === 0) {
+        nums19.push(i);
     }
 }
 
-document.write(`Els divisors de ${num8} són: ${nums.join(", ") || "No hi ha divisors"}`);
+document.write(`Els divisors de ${num19} són: ${nums19.join(", ") || "No hi ha divisors"}`);
 
 //20
-let num9 = parseInt(prompt("Escriu un número"));
-let num10 = parseInt(prompt("Escriu un altre número"));
-let divisors1 = [];
-for (let i = 1; i <= Math.min(num9, num10); i++) {
-    if (num9 % i === 0 && num10 % i === 0) {
-        divisors1.push(i);
+let num20a = parseInt(prompt("Escriu un número"));
+let num20b = parseInt(prompt("Escriu un altre número"));
+let divisors20 = [];
+for (let i = 1; i <= Math.min(num20a, num20b); i++) {
+    if (num20a % i === 0 && num20b % i === 0) {
+        divisors20.push(i);
     }
 }
 
-document.write(`Els divisors comuns de ${num9} i ${num10} són: ${divisors1.join(", ") || "No hi ha divisors comuns"}`);
+document.write(`Els divisors comuns de ${num20a} i ${num20b} són: ${divisors20.join(", ") || "No hi ha divisors comuns"}`);
 
 //21
-const num = parseInt(prompt("Escriu un número"));
+const num21 = parseInt(prompt("Escriu un número"));
 
 function esPrimer(n) {
     if (n <= 1) return false;
     if (n === 2) return true;
-    if (n % 2 === 0) return false; 
+    if (n % 2 === 0) return false;
 
     const limit = Math.sqrt(n);
     for (let i = 3; i <= limit; i += 2) {
@@ -146,8 +145,8 @@ function esPrimer(n) {
     return true;
 }
 
-const msg = esPrimer(num) 
-    ? `El número ${num} és primer.` 
-    : `El número ${num} no és primer.`;
+const msg21 = esPrimer(num21)
+    ? `El número ${num21} és primer.`
+    : `El número ${num21} no és primer.`;
 
-document.write(msg);
+document.write(msg21);

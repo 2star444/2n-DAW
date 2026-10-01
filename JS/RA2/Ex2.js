@@ -49,3 +49,38 @@ for (let i = 0; i < bitllets.length; i++) {
     diners -= numBitllets * bitllets[i];
   }
 }
+
+//EX5 
+/*
+Donats 137 minuts calcula hores i minuts. 
+*/
+let minuts = 137;
+let hores = Math.floor(minuts / 60);
+let minutsRestants = minuts % 60;
+document.write(`${hores}h ${minutsRestants}m`);
+
+//EX6
+let nom = prompt("Introdueix el teu nom: ");
+
+if (nom === undefined || nom === null) {
+  document.write("Hola convidat.");
+} else if (nom.trim() === "") {
+  document.write(`Hola, `);
+} else {
+  document.write(`Hola, ${nom}.`);
+}
+
+//EX7
+/*
+Validació que accepti només enters positius.
+*/
+
+let num3; 
+
+do {
+  num3 = parseInt(prompt("Introdueix un número enter positiu: "));
+  if (isNaN(num3) || num3 < 0 || !Number.isInteger(num3)) {
+    alert("Si us plau, introdueix un número enter positiu.");
+  }
+} while (isNaN(num3) || num3 < 0);
+

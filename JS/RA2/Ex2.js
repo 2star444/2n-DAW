@@ -84,3 +84,26 @@ do {
   }
 } while (isNaN(num3) || num3 < 0);
 
+/*
+Demana nota numèrica i mostra la qualificació. <5 insuficient, >5 suficient, >6 bé, >8 notable, >9 excel·lent. i comprovar que la nota sigui entre 0 i 10. Si no ho és, tornar a demanar la nota.
+*/
+let nota;
+
+do {
+  nota = parseFloat(prompt("Introdueix la nota numèrica: "));
+  if (isNaN(nota) || nota < 0 || nota > 10) {
+    alert("Si us plau, introdueix una nota numèrica entre 0 i 10.");
+  }
+} while (isNaN(nota) || nota < 0 || nota > 10);
+
+if (nota < 5) {
+  document.write("Insuficient");
+} else if (nota < 6) {
+  document.write("Suficient");
+} else if (nota < 8) {
+  document.write("Bé");
+} else if (nota < 9) {
+  document.write("Notable");
+} else {
+  document.write("Excel·lent");
+}

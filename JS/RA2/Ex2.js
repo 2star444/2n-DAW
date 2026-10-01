@@ -8,7 +8,7 @@ for (let i = 0; i < rep; i++) {
 //EX2
 let num = parseInt(prompt("Introdueix un número: "));
 for (let i = 1; i <= 12; i++) {
-  document.write(`${num} x ${i} = ${num * i} <br>`);
+  document.write(`${i} x ${num} = ${num * i} <br>`);
 }
 
 //EX3

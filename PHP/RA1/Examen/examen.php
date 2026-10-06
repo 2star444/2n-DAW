@@ -21,6 +21,9 @@ Pàgina per a calcular el cost final per alumne tenint en compte el nombre d'ins
 <body>
     <?php
 
+    $barra = "_";
+
+
     //P2
     $nomSortida = "Excursió Montserrat";
     $preuPerAlumne = 24.95;
@@ -29,6 +32,8 @@ Pàgina per a calcular el cost final per alumne tenint en compte el nombre d'ins
     $dipositJaPagat = 150.75;
 
     echo "<h2>EXCURSIÓ: $nomSortida </h2>";
+
+    echo str_repeat($barra, 250);
 
     //P3
     define("IVA_ACTIVITATS", 0.10);

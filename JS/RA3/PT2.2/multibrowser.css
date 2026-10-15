@@ -1,0 +1,15 @@
+body {
+    background-image: url('bgmulti.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    backdrop-filter: blur(2px);
+}
+
+#form {
+
+}

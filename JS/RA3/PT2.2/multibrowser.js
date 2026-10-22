@@ -13,7 +13,7 @@ const TITLE_COLOR_SCHEMES = [
 ];
 
 /**
- * Crea el títol i canvia la combinació de colors cada cinc segons.
+ * Crea el títol i canvia els colors cada cinc segons.
  * @returns {void}
  */
 function initTitle() {
@@ -35,7 +35,7 @@ function initTitle() {
 }
 
 /**
- * Aplica la combinació de colors actual a les lletres del títol.
+ * Aplica combinació de colors al títol.
  * @returns {void}
  */
 function applyTitleColors() {
@@ -70,7 +70,7 @@ function formatDate(date) {
 }
 
 /**
- * Actualitza el rellotge que es mostra al peu de pàgina.
+ * Actualitza rellotge.
  * @returns {void}
  */
 function updateClock() {
@@ -79,8 +79,8 @@ function updateClock() {
 
 /**
  * Busca una cookie pel seu nom.
- * @param {string} name - Nom de la cookie.
- * @returns {string|null} Valor de la cookie o null si no existeix.
+ * @param {string} Nom de la cookie.
+ * @returns {string|null} Null si no existeix.
  */
 function getCookie(name) {
     const cookies = document.cookie.split("; ");
@@ -112,7 +112,7 @@ function setCookie(name, value, days) {
 }
 
 /**
- * Mostra l'última visita i desa la data i hora actuals a la cookie.
+ * Mostra l'última visita i guarda la data i hora actuals a la cookie.
  * @returns {void}
  */
 function handleLastVisitCookie() {

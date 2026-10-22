@@ -15,4 +15,4 @@ Obre `index.html` amb una extensió de servidor local com Live Server a Visual S
 
 ## Codi
 
-Els fitxers JavaScript fan servir funcions declarades, variables, condicions, bucles `for` i les instruccions bàsiques del DOM. L'historial es mostra amb `createElement` i `textContent`, tal com demana l'enunciat.
+Els fitxers JavaScript fan servir funcions declarades, variables, condicions, bucles `for` i les instruccions bàsiques del DOM. L'historial es mostra amb `createElement` i `textContent`.

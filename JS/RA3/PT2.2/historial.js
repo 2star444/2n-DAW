@@ -1,10 +1,9 @@
 /**
  * @file historial.js
- * Lògica per mostrar i actualitzar l'historial de visites.
  */
 
 /**
- * Mostra les adreces desades al localStorage.
+ * Mostra adreces desades al localStorage.
  * @returns {void}
  */
 function renderHistory() {
@@ -24,8 +23,8 @@ function renderHistory() {
 }
 
 /**
- * Actualitza la llista quan canvia l'historial en una altra finestra.
- * @param {StorageEvent} event - Esdeveniment de canvi del localStorage.
+ * Actualitza llista quan canvia l'historial en una altra finestra.
+ * @param {StorageEvent}
  * @returns {void}
  */
 function handleStorageChange(event) {
@@ -35,7 +34,7 @@ function handleStorageChange(event) {
 }
 
 /**
- * Carrega l'historial i escolta els canvis d'altres finestres.
+ * Carrega historial i escolta els canvis d'altres finestres.
  * @returns {void}
  */
 function initHistory() {

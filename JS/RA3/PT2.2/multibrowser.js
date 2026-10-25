@@ -1,6 +1,5 @@
 /**
  * @file multibrowser.js
- * Lògica principal de la pàgina index.html.
  */
 
 let openWindows = [];
@@ -13,7 +12,7 @@ const TITLE_COLOR_SCHEMES = [
 ];
 
 /**
- * Crea el títol i canvia els colors cada cinc segons.
+ * Crea  títol i canvia color cada cinc segons.
  * @returns {void}
  */
 function initTitle() {
@@ -52,9 +51,9 @@ function applyTitleColors() {
 }
 
 /**
- * Formata una data a dd/mm/aaaa hh:mm:ss.
- * @param {Date} date - Data que s'ha de formatar.
- * @returns {string} Data formatada.
+ * Formata data a dd/mm/aaaa hh:mm:ss.
+ * @param {Date} 
+ * @returns {string} 
  */
 function formatDate(date) {
     const options = {
@@ -79,7 +78,7 @@ function updateClock() {
 
 /**
  * Busca una cookie pel seu nom.
- * @param {string} Nom de la cookie.
+ * @param {string} Nom cookie.
  * @returns {string|null} Null si no existeix.
  */
 function getCookie(name) {
@@ -98,9 +97,9 @@ function getCookie(name) {
 
 /**
  * Desa una cookie durant el nombre de dies indicat.
- * @param {string} name - Nom de la cookie.
- * @param {string} value - Valor de la cookie.
- * @param {number} days - Dies de durada.
+ * @param {string} Nom de la cookie.
+ * @param {string} Valor de la cookie.
+ * @param {number} Dies de durada.
  * @returns {void}
  */
 function setCookie(name, value, days) {
@@ -112,7 +111,7 @@ function setCookie(name, value, days) {
 }
 
 /**
- * Mostra l'última visita i guarda la data i hora actuals a la cookie.
+ * Mostra última visita i guarda la data i hora actuals a la cookie.
  * @returns {void}
  */
 function handleLastVisitCookie() {
@@ -129,9 +128,9 @@ function handleLastVisitCookie() {
 }
 
 /**
- * Afegeix https:// a l'adreça si encara no té protocol.
- * @param {string} url - Adreça introduïda.
- * @returns {string} Adreça amb protocol.
+ * Afegeix https:// a l'adreça si no té protocol.
+ * @param {string}
+ * @returns {string} 
  */
 function normalizeUrl(url) {
     const lowerCaseUrl = url.toLowerCase();
@@ -159,8 +158,8 @@ function closePreviousWindows() {
 }
 
 /**
- * Retorna les adreces introduïdes als camps que no estan buits.
- * @returns {string[]} Adreces introduïdes.
+ * Retorna adreces introduïdes als camps que no estan buits.
+ * @returns {string[]} 
  */
 function getValidInputs() {
     const inputIds = ["url1", "url2", "url3", "url4"];
@@ -178,7 +177,7 @@ function getValidInputs() {
 }
 
 /**
- * Obre les adreces no buides en finestres disposades en mosaic.
+ * Obre adreces no buides en finestres en mosaic.
  * @returns {void}
  */
 function handleVisit() {
@@ -242,8 +241,8 @@ function handleVisit() {
 }
 
 /**
- * Desa les adreces visitades a l'historial del localStorage.
- * @param {string[]} urls - Adreces que s'han de desar.
+ * Desa adreces visitades a l'historial del localStorage.
+ * @param {string[]}
  * @returns {void}
  */
 function saveHistory(urls) {
@@ -261,7 +260,7 @@ function saveHistory(urls) {
 }
 
 /**
- * Obre la pàgina de l'historial en una finestra nova.
+ * Obre l'historial en una finestra nova.
  * @returns {void}
  */
 function openHistoryPage() {
@@ -269,7 +268,7 @@ function openHistoryPage() {
 }
 
 /**
- * Inicialitza els elements i els esdeveniments de la pàgina.
+ * Inicialitza elements i esdeveniments de la pàgina.
  * @returns {void}
  */
 function initApp() {

@@ -7,4 +7,4 @@ do {
     $num--;
 } while ($num > 0);
 
-echo "Enlairament!"
+echo "Enlairament!";

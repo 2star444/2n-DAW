@@ -103,11 +103,8 @@ $guanyadora = array_key_first($classificacio);
 require "visual.php";
 
 
-// funcions
-
 
 // neteja text eliminant espais, en minúscules i primera lletra en majúscula
-
 function netejarText(string $text): string
 {
     return ucfirst(strtolower(trim($text)));
@@ -115,7 +112,6 @@ function netejarText(string $text): string
 
 
 // retorna  número aleatori entre 1 i el nombre de cares 
- 
 function tiraDau(int $cares = CARES_DAU): int
 {
     return rand(1, $cares);

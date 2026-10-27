@@ -3,18 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pràctica1b</title>
-    <link rel = "stylesheet" href = "contacte_styles.css"/>
+    <title>Contacte — Vòlei Platja Accessible</title>
+    <link rel="stylesheet" href="contacte_styles.css"/>
 </head>
 <body>
-    <header>
-    <nav>
-        <ul>
-            <li><a href="index.html">INICI</a></li>
-            <li><a href="#">CLASSIFICACIÓ</a></li>
-            <li><a href="contacte.html">CONTACTE</a></li>
-        </ul>
-    </nav>
-</header>
+
+    <!-- Enllaç de salt  al contingut principal -->
+    <a href="#main-content" class="skip-link">Saltar al contingut principal</a>
+
+    <!-- HEADER i NAV -->
+    <header class="glass-container">
+        <nav aria-label="Navegació principal">
+            <ul>
+                <li><a href="index.html">INICI</a></li>
+                <li><a href="index.html#classificacio">CLASSIFICACIÓ</a></li>
+                <li><a href="contacte.html" aria-current="page" class="active">CONTACTE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main id="main-content">
+        <section class="glass-container">
+            <!-- H1 -->
+            <h1>Formulari de Contacte i Inscripció</h1>
+            
+            <!-- INSTRUCCIONS FORMULARI -->
+            <p id="form-instructions">
+                Omple el formulari següent per sol·licitar informació o inscriure't als propers tornejos. 
+                Els camps marcats amb un asterisc (<span class="required-symbol" aria-hidden="true">*</span>) són obligatoris.
+            </p>
+
+            <!-- FORMULARI -->
+            <!-- aria-describedby enllaça formulari amb paràgraf d'instruccions generals -->
+            <form action="#" method="post" aria-describedby="form-instructions">
+                
+                <!-- NOM-->
+                <div class="form-group">
+                    <label for="nom">Nom i cognoms <span class="required-symbol" aria-hidden="true">*</span></label>
+                    <input type="text" id="nom" name="nom" required autocomplete="name" placeholder="Ex: Raphinha">
+                </div>
+
+                <!-- CORREU -->
+                <div class="form-group">
+                    <label for="email">Correu electrònic <span class="required-symbol" aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="nom@exemple.com">
+                </div>
+
+                <!-- TELÈFON -->
+                <div class="form-group">
+                    <label for="telefon">Telèfon de contacte</label>
+                    <input type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="600000000">
+                </div>
+
+                <!-- RADIOBUTTONS NIVELL -->
+                <fieldset class="form-group">
+                    <legend>Nivell de joc <span class="required-symbol" aria-hidden="true">*</span></legend>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="nivell" value="principiant" required>
+                            Principiant
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="nivell" value="intermedi">
+                            Intermedi
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="nivell" value="avancat">
+                            Avançat / Federat
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- BOTÓ ENVIAMENT -->
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Enviar Missatge</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="glass-container">
+        <p>&copy; 2026 Associació de Vòlei Platja. Web dissenyada sota criteris d'accessibilitat WCAG 2.1 AA.</p>
+    </footer>
+
 </body>
 </html>

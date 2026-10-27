@@ -1,35 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRÀCTICA MULTIBROWSER</title>
+    <title>Multi Browser</title>
     <link rel="stylesheet" href="multibrowser.css">
 </head>
-
 <body>
-    <main>
-        <section>
-            <h1 id="title"></h1>
-        </section>
-        <section class="container">
-            <form id="form">
-                <label for="address1">URL 1</label>
-                <input type="text" name="url" placeholder="url pàgina 1">
-                <label for="address1">URL 2</label>
-                <input type="text" name="url" placeholder="url pàgina 2">
-                <label for="address1">URL 3</label>
-                <input type="text" name="url" placeholder="url pàgina 3">
-                <label for="address1">URL 4</label>
-                <input type="text" name="url" placeholder="url pàgina 4">
-                <button id="btnValidar">Validar</button>
-                <button id="btnValidar">Historial de visites</button>
-            </form>
-        </section>
+    <div class="container">
+        <h1 id="mainTitle"></h1>
 
-    </main>
+        <!-- Avís per si el navegador bloqueja les finestres -->
+        <div id="warningArea" class="warning" hidden></div>
+
+        <!-- Camps d'entrada de les adreces web -->
+        <div class="input-group">
+            <label for="url1">Adreça 1</label>
+            <input type="text" id="url1" placeholder="www.exemple.cat">
+        </div>
+        <div class="input-group">
+            <label for="url2">Adreça 2</label>
+            <input type="text" id="url2" placeholder="www.exemple.cat">
+        </div>
+        <div class="input-group">
+            <label for="url3">Adreça 3</label>
+            <input type="text" id="url3" placeholder="www.exemple.cat">
+        </div>
+        <div class="input-group">
+            <label for="url4">Adreça 4</label>
+            <input type="text" id="url4" placeholder="www.exemple.cat">
+        </div>
+
+        <!-- Botons -->
+        <div class="button-group">
+            <button id="btnVisit">Visitar</button>
+            <button id="btnHistory">Historial de visites</button>
+        </div>
+
+        <!-- Data actual i última visita -->
+        <footer>
+            <p>Data i hora: <span id="currentClock"></span></p>
+            <p><span id="lastVisit"></span></p>
+        </footer>
+    </div>
+
+    <script src="multibrowser.js"></script>
 </body>
-<script src="multibrowser.js"></script>
-
 </html>

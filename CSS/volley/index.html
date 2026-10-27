@@ -8,14 +8,12 @@
 </head>
 <body>
 
-    <!-- REQUISIT 1: Enllaç de salt accessible per anar directament al contingut principal amb teclat -->
     <a href="#main-content" class="skip-link">Saltar al contingut principal</a>
 
     <!-- REQUISIT 1: Landmark semàntic HEADER i NAV amb navegació coherent -->
     <header class="glass-container">
         <nav aria-label="Navegació principal">
             <ul>
-                <!-- JUSTIFICACIÓ ARIA: aria-current="page" comunica a la tecnologia d'assistència quina és la pàgina activa -->
                 <li><a href="index.html" aria-current="page" class="active">INICI</a></li>
                 <li><a href="classificacio.html">CLASSIFICACIÓ</a></li>
                 <li><a href="contacte.html">CONTACTE</a></li>
@@ -25,25 +23,19 @@
 
     <!-- MAIN -->
     <main id="main-content">
-        <!-- H1 -->
         <section class="glass-container hero-section">
             <h1>Vòlei Platja: Esport, Sorra i Competició</h1>
             <p>Benvinguts al portal oficial del vòlei platja. Aquí trobaràs les regles de joc, l'esquema de la pista i la classificació actualitzada dels tornejos locals.</p>
         </section>
 
-        <!-- SECCIÓ IMATGES -->
         <section class="glass-container">
             <h2>El Camp i el Joc</h2>
             <p>El vòlei platja es juga en una pista de sorra rectangular dividida per una xarxa central.</p>
 
             <div class="image-gallery">
                 <article class="image-card">
-                    <h3>Diagrama Tècnic del Camp</h3>
-                    <!-- 
-                        Imatge és INFORMATIVA, mostra les mesures oficials i la disposició del camp.
-                        S'utilitza role="img" i un atribut aria-label detallat (equivalent a un alt descriptiu) perquè els lectors de pantalla descriguin la informació visual.
-                    -->
-                    <svg role="img" aria-label="Diagrama del camp de vòlei platja de 16 metres de llarg per 8 metres d'ample, dividit per una xarxa central a 2,43 metres per a homes i 2,24 metres per a dones" class="info-img" viewBox="0 0 300 180">
+                    <h3>Diagrama del Camp</h3>
+                    <svg role="img" aria-label="Diagrama de la pista de vòlei platja de 16 per 8 metres, dividida en dos meitats iguals per una xarxa central" class="info-img" viewBox="0 0 300 180">
                         <rect width="300" height="180" fill="#eab308" rx="8"/>
                         <rect x="15" y="15" width="270" height="150" fill="none" stroke="#ffffff" stroke-width="3"/>
                         <line x1="150" y1="15" x2="150" y2="165" stroke="#ffffff" stroke-width="4" stroke-dasharray="4"/>
@@ -53,10 +45,6 @@
 
                 <article class="image-card">
                     <h3>Simbologia Esportiva</h3>
-                    <!-- 
-                        Imatge decorativa. És una il·lustració d'una pilota que compleix una funció estètica.
-                        aria-hidden="true" i alt="" buit per tal que els lectors de pantalla la ignorin completament i no distreguin l'usuari.
-                    -->
                     <svg class="deco-img" aria-hidden="true" viewBox="0 0 100 100">
                         <circle cx="50" cy="50" r="40" fill="none" stroke="#ffffff" stroke-width="4"/>
                         <path d="M 20 30 Q 50 60 80 30" fill="none" stroke="#ffffff" stroke-width="3"/>

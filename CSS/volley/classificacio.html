@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificació — Vòlei Platja Accessible</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+    <!-- Enllaç de salt per a navegació amb teclat -->
+    <a href="#main-content" class="skip-link">Saltar al contingut principal</a>
+
+    <!-- Capçalera i navegació principal -->
+    <header class="glass-container">
+        <nav aria-label="Navegació principal">
+            <ul>
+                <li><a href="index.html">INICI</a></li>
+                <!-- aria-current indica la pàgina activa -->
+                <li><a href="classificacio.html" aria-current="page" class="active">CLASSIFICACIÓ</a></li>
+                <li><a href="contacte.html">CONTACTE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contingut principal -->
+    <main id="main-content">
+        <section class="glass-container hero-section">
+            <h1>Classificació del Torneig d'Estiu 2026</h1>
+            <p>A continuació es mostren els resultats actualitzats dels equips participants en la lliga local de vòlei platja.</p>
+        </section>
+
+        <!-- Taula de classificació -->
+        <section class="glass-container">
+            <h2>Resultats i Posicions</h2>
+
+            <!-- Taula accessible amb caption i capçaleres amb scope -->
+            <div class="table-responsive">
+                <table>
+                    <caption>Classificació General del Torneig de Vòlei Platja 2026</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Posició</th>
+                            <th scope="col">Equip</th>
+                            <th scope="col">Partits Jugats</th>
+                            <th scope="col">Victòries</th>
+                            <th scope="col">Derrotes</th>
+                            <th scope="col">Punts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Sorrencs del Mar</td>
+                            <td>10</td>
+                            <td>9</td>
+                            <td>1</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Xaloc Vòlei Club</td>
+                            <td>10</td>
+                            <td>8</td>
+                            <td>2</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Spike Beach</td>
+                            <td>10</td>
+                            <td>6</td>
+                            <td>4</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Costa Brava Team</td>
+                            <td>10</td>
+                            <td>4</td>
+                            <td>6</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Sorra i Xarxa</td>
+                            <td>10</td>
+                            <td>1</td>
+                            <td>9</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Peu de pàgina -->
+    <footer class="glass-container">
+        <p>&copy; 2026 Associació de Vòlei Platja. Web dissenyada sota criteris d'accessibilitat WCAG 2.1 AA.</p>
+    </footer>
+
+</body>
+</html>

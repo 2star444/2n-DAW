@@ -8,12 +8,14 @@
 </head>
 <body>
 
+    <!-- Enllaç de salt per a navegació amb teclat -->
     <a href="#main-content" class="skip-link">Saltar al contingut principal</a>
 
-    <!-- REQUISIT 1: Landmark semàntic HEADER i NAV amb navegació coherent -->
+    <!-- Capçalera i navegació principal -->
     <header class="glass-container">
         <nav aria-label="Navegació principal">
             <ul>
+                <!-- aria-current indica la pàgina activa -->
                 <li><a href="index.html" aria-current="page" class="active">INICI</a></li>
                 <li><a href="classificacio.html">CLASSIFICACIÓ</a></li>
                 <li><a href="contacte.html">CONTACTE</a></li>
@@ -21,40 +23,34 @@
         </nav>
     </header>
 
-    <!-- MAIN -->
+    <!-- Contingut principal -->
     <main id="main-content">
         <section class="glass-container hero-section">
             <h1>Vòlei Platja: Esport, Sorra i Competició</h1>
             <p>Benvinguts al portal oficial del vòlei platja. Aquí trobaràs les regles de joc, l'esquema de la pista i la classificació actualitzada dels tornejos locals.</p>
         </section>
 
+        <!-- Galeria d'imatges -->
         <section class="glass-container">
             <h2>El Camp i el Joc</h2>
             <p>El vòlei platja es juga en una pista de sorra rectangular dividida per una xarxa central.</p>
 
             <div class="image-gallery">
                 <article class="image-card">
-                    <h3>Diagrama del Camp</h3>
-                    <svg role="img" aria-label="Diagrama de la pista de vòlei platja de 16 per 8 metres, dividida en dos meitats iguals per una xarxa central" class="info-img" viewBox="0 0 300 180">
-                        <rect width="300" height="180" fill="#eab308" rx="8"/>
-                        <rect x="15" y="15" width="270" height="150" fill="none" stroke="#ffffff" stroke-width="3"/>
-                        <line x1="150" y1="15" x2="150" y2="165" stroke="#ffffff" stroke-width="4" stroke-dasharray="4"/>
-                        <text x="150" y="100" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">XARXA CENTRAL (16x8m)</text>
-                    </svg>
+                    <h3>Diagrama Tècnic del Camp</h3>
+                    <!-- Imatge informativa amb text alternatiu descriptiu -->
+                    <img src="pista.jpeg" alt="Diagrama del camp de vòlei platja de 16x8 metres dividit per una xarxa central" class="info-img"/>
                 </article>
 
                 <article class="image-card">
                     <h3>Simbologia Esportiva</h3>
-                    <svg class="deco-img" aria-hidden="true" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="40" fill="none" stroke="#ffffff" stroke-width="4"/>
-                        <path d="M 20 30 Q 50 60 80 30" fill="none" stroke="#ffffff" stroke-width="3"/>
-                        <path d="M 30 80 Q 50 40 70 80" fill="none" stroke="#ffffff" stroke-width="3"/>
-                    </svg>
+                    <!-- Imatge decorativa ignorada pels lectors de pantalla -->
+                    <img src="pilota.jpeg" alt="" aria-hidden="true" class="deco-img"/>
                 </article>
             </div>
         </section>
 
-        <!-- Secció resum amb enllaç intern -->
+        <!-- Secció de resum -->
         <section class="glass-container">
             <h2>Torneig d'Estiu 2026</h2>
             <p>Consulta la taula completa de posicions i puntuacions de la lliga local de vòlei platja.</p>
@@ -62,7 +58,7 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- Peu de pàgina -->
     <footer class="glass-container">
         <p>&copy; 2026 Associació de Vòlei Platja. Web dissenyada sota criteris d'accessibilitat WCAG 2.1 AA.</p>
     </footer>

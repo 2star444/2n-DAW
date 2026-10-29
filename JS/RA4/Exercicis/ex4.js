@@ -10,7 +10,7 @@ function estadistiques(...nums) {
     return null;
   }
   if (!nums.every(Number.isFinite)) {
-    throw new TypeError("Tots els valors han de ser nombres finits.");
+    throw new TypeError("Han de ser nombres finits.");
   }
 
   const suma = nums.reduce((total, num) => total + num, 0);

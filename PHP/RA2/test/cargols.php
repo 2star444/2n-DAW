@@ -1,6 +1,5 @@
 <?php
 
-
 //constants
 define('META0', 15);
 define('DAU_MAX', 3);
@@ -59,7 +58,7 @@ while (!$meta) {
 
 //classificacio
 $podium = [];
-foreach($cargols as $c) {
+foreach ($cargols as $c) {
     $podium[$c['nom']] = $c['posicio'];
 }
 

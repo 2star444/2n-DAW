@@ -38,16 +38,25 @@
             <div class="image-gallery">
                 <article class="image-card">
                     <h3>Diagrama Tècnic del Camp</h3>
-                    <!-- Imatge informativa amb text alternatiu descriptiu -->
+                    <!-- 
+                        JUSTIFICACIÓ IMATGE INFORMATIVA: 
+                        Aquesta imatge aporta contingut essencial (les dimensions de la pista de 16x8m i la xarxa). 
+                        Se li assigna un text alternatiu descriptiu complet a l'atribut alt.
+                    -->
                     <img src="pista.jpeg" alt="Diagrama del camp de vòlei platja de 16x8 metres dividit per una xarxa central" class="info-img"/>
                 </article>
 
                 <article class="image-card">
                     <h3>Simbologia Esportiva</h3>
-                    <!-- Imatge decorativa ignorada pels lectors de pantalla -->
+                    <!-- 
+                        JUSTIFICACIÓ IMATGE DECORATIVA: 
+                        Aquesta imatge té un objectiu estètic i no aporta informació. 
+                        S'utilitza alt="" i aria-hidden="true" per evitar que els lectors de pantalla la llegeixin.
+                    -->
                     <img src="pilota.jpeg" alt="" aria-hidden="true" class="deco-img"/>
                 </article>
             </div>
+        </section>
         </section>
 
         <!-- Secció de resum -->
@@ -60,6 +69,13 @@
 
     <!-- Peu de pàgina -->
     <footer class="glass-container">
+        <nav aria-label="Navegació del peu de pàgina" class="footer-nav">
+            <ul>
+                <li><a href="index.html">INICI</a></li>
+                <li><a href="classificacio.html">CLASSIFICACIÓ</a></li>
+                <li><a href="contacte.html">CONTACTE</a></li>
+            </ul>
+        </nav>
         <p>&copy; 2026 Associació de Vòlei Platja. Web dissenyada sota criteris d'accessibilitat WCAG 2.1 AA.</p>
     </footer>
 

@@ -100,13 +100,10 @@ arsort($classificacio);
 $guanyadora = array_key_first($classificacio);
 
 
-require "visual.php";
-
-
-
 // neteja text eliminant espais, en minúscules i primera lletra en majúscula
 function netejarText(string $text): string
 {
+    $text = str_replace("\xc2\xa0", ' ', $text);
     return ucfirst(strtolower(trim($text)));
 }
 
@@ -138,3 +135,6 @@ function lider(array $tortugues): string
 
     return $liderNom;
 }
+
+
+require "visual.php";

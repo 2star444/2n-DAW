@@ -15,10 +15,10 @@ $noms = ["greta", "BRUNA", "  nuc ", "mImOsA", "tito"];
 $tortugues = [];
 for ($i = 0; $i < count($noms); $i++) {
     $tortugues[] = [
-        "nom"      => netejarText($noms[$i]),
-        "posicio"  => 0,
+        "nom" => netejarText($noms[$i]),
+        "posicio" => 0,
         "dormides" => 0,
-        "turbos"   => 0
+        "turbos" => 0
     ];
 }
 

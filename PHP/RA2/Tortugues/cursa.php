@@ -13,10 +13,10 @@ $noms = ["greta", "BRUNA", "  nuc ", "mImOsA", "tito"];
 $tortugues = [];
 for ($i = 0; $i < count($noms); $i++) {
     $tortugues[] = [
-        "nom"      => netejarText($noms[$i]),
-        "posicio"  => 0,
+        "nom" => netejarText($noms[$i]),
+        "posicio" => 0,
         "dormides" => 0,
-        "turbos"   => 0
+        "turbos" => 0
     ];
 }
 
@@ -100,6 +100,7 @@ $guanyadora = array_key_first($classificacio);
 // neteja text eliminant espais, en minúscules i primera lletra en majúscula
 function netejarText(string $text): string
 {
+    $text = str_replace("\xc2\xa0", ' ', $text);
     return ucfirst(strtolower(trim($text)));
 }
 
@@ -131,7 +132,5 @@ function lider(array $tortugues): string
     return $liderNom;
 }
 
+
 require "visual.php";
-
-
-

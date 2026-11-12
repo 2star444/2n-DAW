@@ -33,7 +33,7 @@ while (!$metaAconseguida) {
 
     foreach ($tortugues as &$t) {
         $sort = rand(1, 10);
-        
+
         if ($sort === 1) {
             $t["dormides"]++;
             $esdevenimentsRonda[] = $t["nom"] . " s'adorm!";
@@ -47,7 +47,7 @@ while (!$metaAconseguida) {
             mou($t, $caselles);
         }
     }
-    unset($t); 
+    unset($t);
 
     // --- Guardar FOTO per a l'Historial ---
     $fotoRonda = [];
@@ -59,7 +59,7 @@ while (!$metaAconseguida) {
     // --- Construir la frase del NARRADOR per a la ronda ---
     $nomLider = lider($tortugues);
     $posicioLider = $fotoRonda[$nomLider];
-    
+
     $fraseNarrador = "Ronda $ronda: $nomLider lidera amb $posicioLider caselles.";
     if (!empty($esdevenimentsRonda)) {
         $fraseNarrador .= " " . implode(" ", $esdevenimentsRonda);
@@ -86,22 +86,26 @@ $guanyadora = array_key_first($classificacio);
 
 // --- FUNCIONS ---
 
-function netejarText($text) {
+function netejarText($text)
+{
     return ucfirst(strtolower(trim($text)));
 }
 
-function tiraDau($cares = CARES_DAU) {
+function tiraDau($cares = CARES_DAU)
+{
     return rand(1, $cares);
 }
 
-function mou(&$tortuga, $caselles) {
+function mou(&$tortuga, $caselles)
+{
     $tortuga["posicio"] += $caselles;
 }
 
-function lider($tortugues) {
+function lider($tortugues)
+{
     $lider = null;
     $maxPosicio = -1;
-    foreach($tortugues as $t) {
+    foreach ($tortugues as $t) {
         if ($t["posicio"] > $maxPosicio) {
             $maxPosicio = $t["posicio"];
             $lider = $t["nom"];
@@ -109,3 +113,14 @@ function lider($tortugues) {
     }
     return $lider;
 }
+
+
+/*
+function lider($tortugues) {
+    $guanyadora = array_reduce($tortugues, function($a, $b) {
+        return ($a['posicio'] > $b['posicio']) ? $a : $b;
+    });
+
+    return $guanyadora['nom'] ?? null;
+}
+ */

@@ -10,8 +10,6 @@ $titol = netejarText($titolBrut);
 
 // noms
 $noms = ["greta", "BRUNA", "  nuc ", "mImOsA", "tito"];
-
-// inicialització tortugues i variables seguiment
 $tortugues = [];
 for ($i = 0; $i < count($noms); $i++) {
     $tortugues[] = [
@@ -99,17 +97,11 @@ arsort($classificacio);
 // primera clau és la guanyadora
 $guanyadora = array_key_first($classificacio);
 
-
-require "visual.php";
-
-
-
 // neteja text eliminant espais, en minúscules i primera lletra en majúscula
 function netejarText(string $text): string
 {
     return ucfirst(strtolower(trim($text)));
 }
-
 
 // retorna  número aleatori entre 1 i el nombre de cares 
 function tiraDau(int $cares = CARES_DAU): int
@@ -123,7 +115,7 @@ function mou(array &$tortuga, int $caselles): void
     $tortuga['posicio'] += $caselles;
 }
 
-// retorna el nom de la tortuga líder si hi ha empat, la primera de l'array
+// retorna el nom de la tortuga líder, si hi ha empat, la primera de l'array
 function lider(array $tortugues): string
 {
     $liderNom = $tortugues[0]['nom'];
@@ -138,3 +130,8 @@ function lider(array $tortugues): string
 
     return $liderNom;
 }
+
+require "visual.php";
+
+
+

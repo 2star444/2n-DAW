@@ -2,17 +2,21 @@
 <html lang ="en">
 
 <head>
+    <meta charset="UTF-8">
 </head>
 
 <body>
-    <form action="Ex1.php" method ="post">
+    <form action="Ex2.php" method ="post">
         <label>NOM:
-            <input type ="text" name = nom>
+            <input type ="text" name = "nom">
         </label>
         <button type ="submit" >ENVIAR</button>
+    </form>
+
+    <?php
+if (isset($_POST["nom"]) && (!empty($_POST["nom"]))) {
+    echo "<h1> Hola, " . htmlspecialchars($_POST["nom"]) . "!</h1><br>";
+}
+?>
 </body>
 
-<?php
-if (isset($_POST["nom"]) && (!emtpy($_POST["nom"]))) {
-    echo "<h1> HOLA " . $_POST["nom"] . "!</h1><br>";
-}

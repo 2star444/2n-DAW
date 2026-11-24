@@ -1,6 +1,6 @@
 <?php
 
-if($_SERVER["REQUEST_METHOD"] === "POST" && !empty($_POST["producte"]) && is_numeric($_POST["quantitat"])) {
+if($_SERVER["REQUEST_METHOD"] === "POST" && !empty($_POST["producte"]) && isset($_POST["quantitat"]) && is_numeric($_POST["quantitat"])) {
     $producte = htmlspecialchars($_POST["producte"] ?? "");
     $quantitat = (int)$_POST["quantitat"];
 

@@ -3,11 +3,13 @@ define("IVA", 0.21);
 ?>
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercici 13</title>
 </head>
+
 <body>
     <form action="Ex13.php" method="post">
         <label for="quantitat">Quantitat:</label>
@@ -38,4 +40,5 @@ define("IVA", 0.21);
     }
     ?>
 </body>
+
 </html>

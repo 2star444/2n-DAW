@@ -1,11 +1,11 @@
-<?php
-
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <title>Exercici 6</title>
 </head>
+
 <body>
     <?php
     $nom = htmlspecialchars($_GET["nom"] ?? "desconegut");
@@ -19,4 +19,5 @@
     echo "<p>Preu: $preu €</p>";
     ?>
 </body>
+
 </html>

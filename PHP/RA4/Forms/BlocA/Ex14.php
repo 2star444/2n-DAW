@@ -21,22 +21,22 @@
     </form>
 
     <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $user = trim($_POST["usuari"] ?? "");
-    $pwd = $_POST["clau"] ?? "";
-    $origen = $_POST["origen"] ?? "";
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $user = trim($_POST["usuari"] ?? "");
+        $pwd = $_POST["clau"] ?? "";
+        $origen = $_POST["origen"] ?? "";
 
-    if ($user !== "" && $pwd !== "") {
-        $longitud = mb_strlen($pwd);
+        if ($user !== "" && $pwd !== "") {
+            $longitud = mb_strlen($pwd);
 
-        echo "<p>Usuari: " . htmlspecialchars($user) . "</p>";
-        echo "<p>La contrasenya té " . $longitud . " caràcters.</p>";
-        echo "<p>Origen del formulari: " . htmlspecialchars($origen) . "</p>";
-    } else {
-        echo "<p>Has d'omplir l'usuari i la contrasenya.</p>";
+            echo "<p>Usuari: " . htmlspecialchars($user) . "</p>";
+            echo "<p>La contrasenya té " . $longitud . " caràcters.</p>";
+            echo "<p>Origen del formulari: " . htmlspecialchars($origen) . "</p>";
+        } else {
+            echo "<p>Has d'omplir l'usuari i la contrasenya.</p>";
+        }
     }
-}
-?>
+    ?>
 </body>
 
 </html>

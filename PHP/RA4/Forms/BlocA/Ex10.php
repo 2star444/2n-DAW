@@ -8,11 +8,13 @@ $paisos = [
 ?>
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercici 10</title>
 </head>
+
 <body>
     <form action="Ex10.php" method="post">
         <label for="pais">Selecciona un país:</label>
@@ -40,4 +42,5 @@ $paisos = [
     }
     ?>
 </body>
+
 </html>

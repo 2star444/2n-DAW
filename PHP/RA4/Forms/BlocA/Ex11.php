@@ -8,11 +8,13 @@ $llenguatges = [
 ?>
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercici 11</title>
 </head>
+
 <body>
     <form action="Ex11.php" method="post">
         <label for="llenguatge">Tria un o més llenguatges:</label>
@@ -49,4 +51,5 @@ $llenguatges = [
     }
     ?>
 </body>
+
 </html>
